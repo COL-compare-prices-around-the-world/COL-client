@@ -4,7 +4,6 @@ on:
   push:
     branches:
       - main
-      - ci
 
 env:
   REPO_NAME: ${{ github.event.repository.name }}
