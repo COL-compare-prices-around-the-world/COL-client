@@ -3,7 +3,7 @@ name: deploy-actions
 on:
   push:
     branches:
-      - main
+      - '**'
 
 env:
   REPO_NAME: ${{ github.event.repository.name }}
