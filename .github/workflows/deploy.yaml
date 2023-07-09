@@ -36,8 +36,8 @@ jobs:
     steps:
       - name: Stop container
         run: |
-          sudo docker stop ${{ env.REPO_NAME }}
+          docker stop ${{ env.REPO_NAME }}
       - name: Deploy to server
         if: ${{ always() }}
         run: |
-          sudo docker run -d --rm -p 3000:3000 --name ${{ env.REPO_NAME }} ${{ env.IMAGE_TAG }}
+          docker run -d --rm -p 3000:3000 --name ${{ env.REPO_NAME }} ${{ env.IMAGE_TAG }}
